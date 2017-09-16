@@ -36,7 +36,7 @@ function myTwitter(){
 	var params = {screen_name: 'liri_node'};
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
 		if (!error) {
-    		for(var i = 0; i < tweets.length && 5; i++) {
+    		for(var i = 0; i < 5; i++) {
     			console.log(tweets[i].text)
     		};
   		}else {
@@ -55,7 +55,7 @@ function spotifyThis() {
         console.log('Error occurred: ' + err);
         return;
    		}else {
-   			console.log('artist: ' + data.tracks.items[0].artists[0].name + "\ntitle: " + data.tracks.items[0].album.name + "\npreview: " + data.tracks.items[0].href + "\nalbum: "+ data.tracks.items[0].name);
+   			console.log('Artist: ' + data.tracks.items[0].artists[0].name + "\nTitle: " + data.tracks.items[0].name + "\nPreview: " + data.tracks.items[0].href + "\nAlbum: "+ data.tracks.items[0].album.name);
    		}
 	});
 }
